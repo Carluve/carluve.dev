@@ -1,10 +1,10 @@
-# Peter Steinberger's Personal Website
+# Carlos Luengo's Personal Website
 
-This is the source code for my personal website, built with [Astro](https://astro.build) and deployed on [Vercel](https://vercel.com).
+This is the source code for my personal website, built with [Astro](https://astro.build) and deployed on [Cloudflare Pages](https://pages.cloudflare.com).
 
 ## About
 
-I'm Peter Steinberger, an iOS developer, entrepreneur, and open source contributor. This website hosts my personal blog and information about my work.
+I'm Carlos Luengo Vera, a PhD Candidate and AI researcher passionate about using Generative AI to create solutions that matter. This website hosts my personal blog and information about my work.
 
 ## Project Structure
 
@@ -23,7 +23,7 @@ I'm Peter Steinberger, an iOS developer, entrepreneur, and open source contribut
 │   ├── styles/          # Global styles and CSS
 │   └── utils/           # Utility functions
 ├── astro.config.mjs     # Astro configuration
-├── vercel.json          # Vercel deployment and CSP configuration
+├── wrangler.toml        # Cloudflare Pages configuration
 ├── package.json         # Project dependencies and scripts
 ├── tailwind.config.mjs  # Tailwind CSS configuration
 └── LICENSE              # Dual license (CC BY 4.0 + MIT)
@@ -40,7 +40,14 @@ I'm Peter Steinberger, an iOS developer, entrepreneur, and open source contribut
 
 ## Deployment
 
-This site is set up for easy deployment on Vercel. Just connect your GitHub repository to Vercel, and it will automatically build and deploy the site when changes are pushed.
+This site is deployed on Cloudflare Pages. To deploy:
+
+1. Connect your GitHub repository to Cloudflare Pages
+2. Configure build settings:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+   - **Node.js version:** 20 (or higher)
+3. Cloudflare will automatically build and deploy on every push to main
 
 ## License
 

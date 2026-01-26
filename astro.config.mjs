@@ -99,11 +99,11 @@ export default defineConfig({
     react(),
     AstroPWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "peter-avatar.jpg"],
+      includeAssets: ["favicon.ico", "avatar-carlos.png"],
       manifest: {
-        name: "Peter Steinberger",
-        short_name: "steipete",
-        description: "AI-powered tools from Swift roots to web frontiers. Everything I build is open source.",
+        name: "Carlos Luengo",
+        short_name: "carluve",
+        description: "PhD Candidate, AI researcher, and technology consultant. Blog about AI, productivity, and real-world use cases.",
         theme_color: "#006cac",
         background_color: "#fdfdfd",
         display: "standalone",

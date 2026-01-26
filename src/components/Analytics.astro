@@ -1,21 +1,10 @@
 ---
-// Analytics component for Vercel Analytics and Speed Insights
+// Analytics component for Cloudflare Web Analytics
+// To enable: Add your Cloudflare Web Analytics token below
+// Get your token from: https://dash.cloudflare.com/ -> Web Analytics
 ---
 
-<!-- Vercel Analytics -->
-<script>
-  if (typeof window !== 'undefined' && import.meta.env.PROD) {
-    import('@vercel/analytics').then(({ inject }) => {
-      inject();
-    });
-  }
-</script>
-
-<!-- Vercel Speed Insights -->
-<script>
-  if (typeof window !== 'undefined' && import.meta.env.PROD) {
-    import('@vercel/speed-insights').then(({ injectSpeedInsights }) => {
-      injectSpeedInsights();
-    });
-  }
-</script>
+<!-- Cloudflare Web Analytics -->
+<!-- Uncomment and add your token to enable analytics
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+-->

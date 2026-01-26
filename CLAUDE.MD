@@ -6,7 +6,7 @@ This document contains important instructions and notes for Claude when working 
 
 ### NEVER CREATE BLOG POSTS WITHOUT CONSENT
 
-- **NEVER CREATE BLOG POSTS WITHOUT EXPLICIT CONSENT** from steipete
+- **NEVER CREATE BLOG POSTS WITHOUT EXPLICIT CONSENT** from Carlos
 - Do not write or propose new blog content unless specifically requested
 - Only help with editing or fixing existing posts when asked
 

@@ -1,0 +1,12 @@
+# Cloudflare Pages Redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Legacy blog URL patterns
+/blog/:slug  /posts/:slug  301
+/tag/:tag  /tags/:tag  301
+/categories/:category  /tags/:category  301
+
+# Feed redirects
+/feed  /rss.xml  301
+/feed.xml  /rss.xml  301
+/atom.xml  /rss.xml  301

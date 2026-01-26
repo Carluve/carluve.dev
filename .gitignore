@@ -19,8 +19,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# Vercel
-.vercel/
+# Cloudflare
+.wrangler/
+.dev.vars
 
 # Temporary directories used for importing posts
 temp-*/

@@ -31,12 +31,12 @@ interface Site {
 
 // Site configuration
 export const SITE: Site = {
-  website: "https://steipete.me/",
-  author: "Peter Steinberger",
-  profile: "https://steipete.me/about",
-  desc: "AI-powered tools from Swift roots to web frontiers. Every commit lands on GitHub for you to fork & remix.",
-  title: "Peter Steinberger",
-  ogImage: "peter-avatar.jpg",
+  website: "https://carlosluengo.com/",
+  author: "Carlos Luengo Vera",
+  profile: "https://carlosluengo.com/about",
+  desc: "PhD Candidate, AI researcher, and technology consultant. Blog about AI, productivity, and real-world use cases.",
+  title: "Carlos Luengo",
+  ogImage: "avatar-carlos.png",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
@@ -46,11 +46,11 @@ export const SITE: Site = {
   editPost: {
     enabled: true,
     text: "Edit on GitHub",
-    url: "https://github.com/steipete/steipete.me/edit/main/",
+    url: "https://github.com/carluve/carluve.dev/edit/main/",
   },
   dynamicOgImage: true,
-  lang: "en",
-  timezone: "America/Los_Angeles",
+  lang: "es",
+  timezone: "Europe/Madrid",
 };
 
 export const SITE_TITLE = SITE.title;
@@ -71,16 +71,16 @@ export const NAV_LINKS: SocialLink[] = [
 // Social media links
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/steipete",
+    href: "https://github.com/carluve",
     label: "GitHub",
   },
   {
-    href: "https://twitter.com/steipete",
+    href: "https://twitter.com/carluve",
     label: "Twitter",
   },
   {
-    href: "https://bsky.app/profile/steipete.me",
-    label: "BlueSky",
+    href: "https://linkedin.com/in/carlosluengo",
+    label: "LinkedIn",
   },
   {
     href: "/rss.xml",
@@ -92,7 +92,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const ICON_MAP: Record<string, string> = {
   GitHub: "github",
   Twitter: "twitter",
-  BlueSky: "bsky",
+  LinkedIn: "linkedin",
   RSS: "rss",
   Email: "mail",
 };
