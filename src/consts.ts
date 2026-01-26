@@ -34,7 +34,7 @@ export const SITE: Site = {
   website: "https://carlosluengo.com/",
   author: "Carlos Luengo Vera",
   profile: "https://carlosluengo.com/about",
-  desc: "PhD Candidate, AI researcher, and technology consultant. Blog about AI, productivity, and real-world use cases.",
+  desc: "Passionate about AI and its power to transform education. Researcher, builder, and eternal learner.",
   title: "Carlos Luengo",
   ogImage: "avatar-carlos.png",
   lightAndDarkMode: true,
