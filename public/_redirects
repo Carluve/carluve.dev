@@ -1,12 +1,35 @@
 # Cloudflare Pages Redirects
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
-# Legacy blog URL patterns
+# Legacy blog URL patterns (from old Jekyll site)
 /blog/:slug  /posts/:slug  301
 /tag/:tag  /tags/:tag  301
 /categories/:category  /tags/:category  301
+
+# Jekyll date-based URLs to new structure
+# Format: /YYYY/MM/DD/slug -> /posts/YYYY/slug
+/2024/*/:slug  /posts/2024/:slug  301
+/2025/*/:slug  /posts/2025/:slug  301
+/2026/*/:slug  /posts/2026/:slug  301
+
+# Old carluve.github.io specific redirects
+/ai/chatgpt/*  /posts/2025/:splat  301
+/education/*  /posts/2025/:splat  301
+/technology/*  /posts/2025/:splat  301
 
 # Feed redirects
 /feed  /rss.xml  301
 /feed.xml  /rss.xml  301
 /atom.xml  /rss.xml  301
+/rss  /rss.xml  301
+
+# Common pages
+/archive  /archives  301
+/archive/  /archives  301
+/blog  /posts  301
+/blog/  /posts  301
+
+# Remove trailing slashes (Cloudflare handles this, but explicit)
+/posts/  /posts  301
+/tags/  /tags  301
+/about/  /about  301

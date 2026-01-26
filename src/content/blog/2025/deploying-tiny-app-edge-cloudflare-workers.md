@@ -25,7 +25,7 @@ Cloudflare Workers let you deploy serverless code that runs **directly on Cloudf
 
 Instead of provisioning containers or servers, you ship a tiny script and Cloudflare distributes it globally within seconds.
 
-![Cloudflare Workers Concept](/assets/img/2025_dec/cloudflare7.png)
+![Cloudflare Workers Concept](/assets/img/2025/2025_dec/cloudflare7.png)
 
 In short:
 
@@ -75,7 +75,7 @@ Request → Worker → Response
 
 And it runs globally, everywhere, by default.
 
-![Worker Execution Model](/assets/img/2025_dec/cloudflare8.png)
+![Worker Execution Model](/assets/img/2025/2025_dec/cloudflare8.png)
 
 ---
 
@@ -147,7 +147,7 @@ This is the exact workflow I used to deploy the demo:
 
 Within seconds, you get a global URL plus optional custom domain—in my case: `cloudflare.carlosluengo.es`
 
-![Wrangler Deployment](/assets/img/2025_dec/cloudflare9.png)
+![Wrangler Deployment](/assets/img/2025/2025_dec/cloudflare9.png)
 
 ---
 

@@ -48,7 +48,7 @@ The process is surprisingly simple:
 5. **Paste or Ask Comet to Add the Songs**  
    Comet will take the extracted list from Spotify and start adding them into your new Apple Music playlist automatically.  
 
-   ![Comet migrating playlists into Apple Music](/assets/img/2025/comet/Comet_v3_GIF.gif)
+   ![Comet migrating playlists into Apple Music](/assets/img/2025/comet/Comet_v2.png)
 
 ---
 

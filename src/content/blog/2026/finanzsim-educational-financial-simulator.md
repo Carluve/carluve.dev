@@ -18,7 +18,7 @@ Meet FinanzSim: My Educational Financial Management Simulator
 
 Think of it as a sandbox where students can safely experiment with financial strategies, learn from their mistakes, and receive instant AI-generated feedback without any real-world consequences.
 
-![Pantalla inicial de FinanzSim](/assets/img/2026/january/finanzsim2026_01.png)
+![Pantalla inicial de FinanzSim](/assets/img/2025/2026/january/finanzsim2026_01.png)
 
 ---
 
@@ -41,7 +41,7 @@ I built FinanzSim with several clear goals in mind:
 1. **Choose Your Timeframe** — Select how many years you want to simulate (from 1 to 12 years).
 2. **Start with Initial Capital** — Your company begins with a treasury of **100,000 €**.
 
-![Selección de años y capital inicial](/assets/img/2026/january/finanzsim2026_02.png)
+![Selección de años y capital inicial](/assets/img/2025/2026/january/finanzsim2026_02.png)
 
 ### Year-by-Year Management
 
@@ -59,7 +59,7 @@ For each simulated year, you'll make key business decisions:
 | **Collection Days** | How long customers take to pay you |
 | **Payment Days** | How long you take to pay suppliers |
 
-![Panel de decisiones anuales](/assets/img/2026/january/finanzsim2026_03.png)
+![Panel de decisiones anuales](/assets/img/2025/2026/january/finanzsim2026_03.png)
 
 ### Real-Time Financial Analysis
 
@@ -72,7 +72,7 @@ After submitting your decisions for each year, FinanzSim calculates and displays
 - **Cash Flow** — For NPV calculations
 - **Working Capital Cycle (PMM)** — Storage, manufacturing, sales, and collection periods
 
-![Análisis financiero en tiempo real](/assets/img/2026/january/finanzsim2026_04.png)
+![Análisis financiero en tiempo real](/assets/img/2025/2026/january/finanzsim2026_04.png)
 
 ### AI-Powered Professor Feedback
 
