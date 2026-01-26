@@ -144,10 +144,29 @@ const structuredData = {
     
     <!-- Twitter Widget Script -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    <!-- Cloudflare AI Search (NLWeb) -->
+    <link rel="stylesheet" href="https://frosty-boat-36a8-nlweb.carluve.workers.dev/nlweb-dropdown-chat.css">
+    <link rel="stylesheet" href="https://frosty-boat-36a8-nlweb.carluve.workers.dev/common-chat-styles.css">
   </head>
   <body>
+    <!-- Cloudflare AI Search Container -->
+    <div id="docs-search-container"></div>
+    
     <slot />
     <Analytics />
+    
+    <!-- Cloudflare AI Search Script -->
+    <script type="module">
+      import { NLWebDropdownChat } from 'https://frosty-boat-36a8-nlweb.carluve.workers.dev/nlweb-dropdown-chat.js';
+
+      const chat = new NLWebDropdownChat({
+        containerId: 'docs-search-container',
+        site: 'https://frosty-boat-36a8-nlweb.carluve.workers.dev',
+        placeholder: 'Search...',
+        endpoint: 'https://frosty-boat-36a8-nlweb.carluve.workers.dev'
+      });
+    </script>
   </body>
 </html>
 
