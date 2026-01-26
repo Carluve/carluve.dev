@@ -3,7 +3,7 @@ title: "Deploying Clawdbot on a Mac Mini Using Cloudflare Tunnel: A Step-by-Step
 pubDatetime: 2026-01-26T00:00:00Z
 description: "A detailed guide to securely deploying Clawdbot on a Mac Mini and exposing it via Cloudflare Tunnel for home use"
 tags: ["clawdbot", "cloudflare", "tunnel", "deployment", "security", "macos", "mac-mini", "ai", "telegram"]
-draft: true
+draft: false
 ---
 
 
