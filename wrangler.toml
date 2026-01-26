@@ -1,0 +1,9 @@
+# Cloudflare Workers/Pages configuration
+# https://developers.cloudflare.com/workers/wrangler/configuration/
+
+name = "carlosluengo"
+compatibility_date = "2026-01-26"
+
+# Static assets deployment (for Astro static site)
+[assets]
+directory = "./dist"
