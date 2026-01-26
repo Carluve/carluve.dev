@@ -117,22 +117,32 @@ export default defineConfig({
             type: "image/x-icon",
           },
           {
-            src: "peter-avatar.jpg",
+            src: "favicon-192x192.png",
             sizes: "192x192",
-            type: "image/jpeg",
+            type: "image/png",
             purpose: "any",
           },
           {
-            src: "peter-avatar.jpg",
+            src: "favicon-512x512.png",
             sizes: "512x512",
-            type: "image/jpeg",
+            type: "image/png",
             purpose: "any maskable",
           },
         ],
       },
       workbox: {
         navigateFallback: "/404",
-        globPatterns: ["**/*.{css,js,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico}"],
+        // Exclude large image folders from precache
+        globPatterns: ["**/*.{css,js,html,svg,woff,woff2,ttf,eot,ico}"],
+        // Increase file size limit to 5MB and suppress warnings for larger files
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        // Exclude large assets from precache
+        globIgnores: [
+          "**/assets/img/2025/teaching/**",
+          "**/assets/img/2025/portfolio/**", 
+          "**/assets/img/2025/comet/**",
+          "**/*.gif"
+        ],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
