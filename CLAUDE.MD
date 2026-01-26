@@ -77,10 +77,8 @@ npm run preview
 5. **Fixing broken images**:
 
    - Blog posts reference images in the `/public/assets/img/` directory structure
-   - The original files can be found in `/temp-repos/steipete.com/assets/img/`
    - Images must be copied to the matching public directory structure
    - Fixed images should be committed to the repository
-   - Use `find` command to locate the original images
    - Common image paths follow the pattern: `/assets/img/YEAR/POST-NAME/IMAGE.jpg`
 
 6. **Dependency Updates**:
