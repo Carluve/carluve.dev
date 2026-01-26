@@ -150,11 +150,42 @@ const structuredData = {
     <link rel="stylesheet" href="https://frosty-boat-36a8-nlweb.carluve.workers.dev/common-chat-styles.css">
   </head>
   <body>
-    <!-- Cloudflare AI Search Container -->
-    <div id="docs-search-container"></div>
-    
     <slot />
     <Analytics />
+    
+    <!-- AI Chat Bot Button -->
+    <div id="ai-chat-wrapper">
+      <!-- Welcome bubble -->
+      <div id="ai-chat-bubble" class="ai-chat-bubble">
+        <span>👋 ¡Hola! Pregúntame lo que quieras sobre el blog</span>
+        <button id="ai-bubble-close" class="ai-bubble-close">×</button>
+      </div>
+      
+      <!-- Chat container (hidden by default) -->
+      <div id="ai-chat-panel" class="ai-chat-panel">
+        <div class="ai-chat-header">
+          <span>🤖 AI Assistant</span>
+          <button id="ai-panel-close" class="ai-panel-close">×</button>
+        </div>
+        <div id="docs-search-container"></div>
+      </div>
+      
+      <!-- Floating bot button -->
+      <button id="ai-chat-btn" class="ai-chat-btn" aria-label="Abrir asistente AI">
+        <svg id="ai-btn-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 8V4H8"/>
+          <rect width="16" height="12" x="4" y="8" rx="2"/>
+          <path d="M2 14h2"/>
+          <path d="M20 14h2"/>
+          <path d="M15 13v2"/>
+          <path d="M9 13v2"/>
+        </svg>
+        <svg id="ai-btn-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
     
     <!-- Cloudflare AI Search Script -->
     <script type="module">
@@ -163,8 +194,61 @@ const structuredData = {
       const chat = new NLWebDropdownChat({
         containerId: 'docs-search-container',
         site: 'https://frosty-boat-36a8-nlweb.carluve.workers.dev',
-        placeholder: 'Search...',
+        placeholder: 'Escribe tu pregunta...',
         endpoint: 'https://frosty-boat-36a8-nlweb.carluve.workers.dev'
+      });
+      
+      // UI Elements
+      const chatBtn = document.getElementById('ai-chat-btn');
+      const chatPanel = document.getElementById('ai-chat-panel');
+      const chatBubble = document.getElementById('ai-chat-bubble');
+      const bubbleClose = document.getElementById('ai-bubble-close');
+      const panelClose = document.getElementById('ai-panel-close');
+      const btnIcon = document.getElementById('ai-btn-icon');
+      const btnClose = document.getElementById('ai-btn-close');
+      
+      let isOpen = false;
+      
+      // Show bubble after 3 seconds (only once per session)
+      if (!sessionStorage.getItem('ai-bubble-shown')) {
+        setTimeout(() => {
+          chatBubble?.classList.add('show');
+          sessionStorage.setItem('ai-bubble-shown', 'true');
+        }, 3000);
+      }
+      
+      // Close bubble
+      bubbleClose?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        chatBubble?.classList.remove('show');
+      });
+      
+      // Toggle chat panel
+      chatBtn?.addEventListener('click', () => {
+        isOpen = !isOpen;
+        chatPanel?.classList.toggle('show', isOpen);
+        chatBubble?.classList.remove('show');
+        btnIcon?.classList.toggle('hidden', isOpen);
+        btnClose?.classList.toggle('hidden', !isOpen);
+      });
+      
+      // Close panel
+      panelClose?.addEventListener('click', () => {
+        isOpen = false;
+        chatPanel?.classList.remove('show');
+        btnIcon?.classList.remove('hidden');
+        btnClose?.classList.add('hidden');
+      });
+      
+      // Close on click outside
+      document.addEventListener('click', (e) => {
+        const wrapper = document.getElementById('ai-chat-wrapper');
+        if (isOpen && wrapper && !wrapper.contains(e.target)) {
+          isOpen = false;
+          chatPanel?.classList.remove('show');
+          btnIcon?.classList.remove('hidden');
+          btnClose?.classList.add('hidden');
+        }
       });
     </script>
   </body>
